@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: farming-server
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: API_KEY
+        value: your-default-master-api-key
+      - key: MACHINE_KEY
+        value: fixed-machine-api-key-12345
